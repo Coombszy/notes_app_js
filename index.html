@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Notes App!</title>
+  <meta name="description" content="test notes application on a single webpages">
+  <meta name="author" content="Liam Coombs">
+
+  <script src="js/note.js"></script>
+  <script src="js/noteboard.js"></script>
+  <script src="js/interface.js"></script>
+
+  
+</head>
+
+<style>
+  h1 {text-align: center;}
+  p {text-align: center;}
+  body {text-align: center;}
+  .addBtn {
+    padding: 10px;
+    width: 25%;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    }
+
+</style>
+
+<body onload="onLoad();">
+  <h1>Notes App!</h1>
+  <p><span id="SP1" >Test Span!</span></p>
+  
+  <div id="DIV1">
+      <h2>Create a Note!</h2>
+      <input type="text" id="noteInput" placeholder="Note data...">
+      <span onclick="newNote()" class="addBtn">Add</span>
+  </div>
+
+  <span id="SP2"></span>
+
+</body>
+
+</html>
