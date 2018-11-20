@@ -15,16 +15,27 @@ function updatePage(){
   if (this.notes.isEmpty() == false)
   {
     var span = document.getElementById("SP2")
-    span.innerHTML = "<p>AA</p>";
+    span.innerHTML = notesDrawing();
   }
-  console.log(this.notes);
 }
 
 function notesDrawing(){
-  var html = `
+  var htmlstart = `
   <div>
-    <span>Some HTML here</span>
+    <span>
+    <h2>Your Notes!</h2>
+    <ul>
+    <div class="list">
+  `;
+  var htmlbody = "";
+  var htmlend = `
+    </div>
+    </ul>
+    </span>
   </div>
-`;
-return html
+  `;
+  this.notes.getAllNotes().forEach(function(element) {
+    htmlbody += "<li>"+element.getContent()+"</li>";
+  });
+return htmlstart + htmlbody + htmlend
 }
